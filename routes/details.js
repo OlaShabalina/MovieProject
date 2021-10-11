@@ -33,7 +33,7 @@ router.get("/:id", (req, res) => {
 
 // for gretting rating value
 
-router.post("/", (req, res) => {
+router.post("/:id", (req, res) => {
   console.log(req.body.rating);
   console.log(req.session.userId);
   console.log(req.params.id);
