@@ -3,7 +3,7 @@
 
 <head>
     <%- include('../partials/head.ejs') %>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="/styles.css">
         <title>Movie Details</title>
 </head>
 
@@ -12,7 +12,7 @@
     <%- include('../partials/nav.ejs') %>
 
 
-            <header class="text-center m-4">
+            <header class="m-4 text-center">
                 <h1>Movie details</h1>
                 <!-- <%= id %> -->
             </header>
@@ -24,7 +24,7 @@
                     <div class="col"></div>
                 
                 <!-- movie details div -->
-                    <div class="card m-auto" style="width: 20rem; background-color:#ddd ;">
+                    <div class="m-auto card" style="width: 20rem; background-color:#ddd ;">
                         <div class="card-body"></div>
             
                     </div>
@@ -36,7 +36,7 @@
                 <% if(typeof message !=='undefined' ) { %>
                     <%= message %>
                         <% } else { %>
-                <div id="rate-div" class="row  mt-4">
+                <div id="rate-div" class="mt-4 row">
                     <% if (typeof userId !=='undefined' ){ %>
                         <h3 class="text-center">You can rate the movie from 1 to 5</h3>
                     <form action="/:id" method="POST">
@@ -62,6 +62,6 @@
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <!-- creating a variable to get movie id  -->
         <script>const movieID = <%= id %>;</script>
-        <script src="movieDetails.js"></script>
+        <script src="/movieDetails.js"></script>
 
 </body>
