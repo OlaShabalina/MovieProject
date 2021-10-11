@@ -2,10 +2,10 @@ const express = require("express");
 const router = express.Router();
 const db = require("../database");
 
-router.get("/", (req, res) => {
+router.get("/:id", (req, res) => {
   const userId = req.session.userId;
-  let { id } = req.params;
-
+  let id = req.params.id;
+  console.log(id);
   db.oneOrNone(
     "SELECT movie_id, users_id, rating FROM movies WHERE movies.users_id = $1 AND movie_id = $2;",
     [userId, id]
