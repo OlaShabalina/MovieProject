@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const db = require("../database");
 
-router.get("/:id", (req, res) => {
+router.get("/:id([0-9]+)", (req, res) => {
   const userId = req.session.userId;
   let id = req.params.id;
   console.log(id);

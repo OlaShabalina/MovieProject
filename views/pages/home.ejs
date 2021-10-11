@@ -10,7 +10,7 @@
     <!-- flesh messages after redirecting from login -->
     <div class="container flesh-container">
         <% if (messages.success_msg) { %> 
-            <p class="text-success text-center"><%= messages.success_msg %></li>
+            <p class="text-center text-success"><%= messages.success_msg %></li>
         <% } %> 
     </div>
 
@@ -18,9 +18,9 @@
         <h3 class="text-center">Search For Any Movie</h3>
         <form id="searchForm">
             <label class="form-label" for="searchText">Search for any movie:</label>
-            <input type="text" class="form-control mb-3" id="searchText" placeholder="Search Movies...">
+            <input type="text" class="mb-3 form-control" id="searchText" placeholder="Search Movies...">
             <label class="form-label" for="genre">Search by genre:</label>
-            <select id="genreSelection" name="genre" class="form-select mb-3">
+            <select id="genreSelection" name="genre" class="mb-3 form-select">
             </select> 
         </form>
     </div>
@@ -52,8 +52,6 @@
             let user
         <% if (typeof userId !== 'undefined') { %>
             user = <%= userId %>
-        <% } else { %>
-            user = 0
         <% } %>
     </script>
 

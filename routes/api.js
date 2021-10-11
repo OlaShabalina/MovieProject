@@ -11,7 +11,7 @@ router.get('/', (req,res) => {
     .then((ratings) => {
 
 
-        console.log(ratings);
+        // console.log(ratings);
         
         res.json({ ratings });
     })

@@ -33,7 +33,7 @@ $("#rate").on("click", (e) => {
   e.preventDefault();
   console.log($("#rating").val());
   //   $.ajax();
-  $.post(`/${movieID}`, {
+  $.post(`/movie/${movieID}`, {
     rating: $("#rating").val(),
   });
   $("#rate-div").append(`<h4>Your ratings:${$("#rating").val()}`);

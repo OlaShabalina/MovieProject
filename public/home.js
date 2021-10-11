@@ -125,7 +125,7 @@ const getDataFromAPI = (ajaxRequest) => {
                 $.ajax('/api').then(allRatings => {
 
                     // if user exists in the system, we generate DOM this way (with user rating column)
-                    if (user !== 0) {
+                    if (user) {
                         // Start from getting average rating for movies where possible
 
                         // using function below to generate average rating and number of votes
@@ -192,7 +192,7 @@ const showRowWithData = (film, averageRating, usersVoted, yourVote) => {
         <td class="movie-title">${film.title}</td>
         <td><i class="material-icons">star</i> <strong>${averageRating}</strong>(${usersVoted})</td>
         <td><i class="material-icons">star</i>${yourVote}</td>
-        <td><a href="${film.id}"><i class="material-icons">info</i></a></td>
+        <td><a href="/movie/${film.id}"><i class="material-icons">info</i></a></td>
         </tr>`)
     $(".film-list").append(newFilm);
 }
